@@ -92,6 +92,7 @@ describe('Systemstatustool CRUD routes tests', function () {
                     return done(err);
                 }
                 var resp = res.body;
+                assert.equal(resp.status, 200);
                 assert.equal(resp.data.name, mockup.name);
                 assert.equal(resp.data.action, mockup.action);
                 assert.equal(resp.data.description, mockup.description);
